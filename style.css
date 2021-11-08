@@ -1,0 +1,83 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px 122px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #EEF9BF;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 40px auto 47px;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+    color: #75B79E;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    width: 117px;
+    height: 146px;
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back,
+.card-front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    background: lightcoral;
+}
+
+img {
+    margin: 24px 0px 0px 10px;
+    height: 100px;
+    width: 100px;
+}
+
+.card.selected1,
+.card.selected2 {
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 335px) {
+    h1 {
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: -0.004em;
+    }
+}
