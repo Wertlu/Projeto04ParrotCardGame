@@ -70,7 +70,13 @@ img {
 
 .card.selected1,
 .card.selected2 {
+    pointer-events: none;
     transform: rotateY(180deg);
+}
+
+.done {
+    transform: rotateY(180deg);
+    pointer-events: none;
 }
 
 @media (max-width: 335px) {
